@@ -1,5 +1,11 @@
-.idea/*
+.idea/
+.vscode/
+atc_rl_env.egg-info/
+build/
+dist/
+__pycache__/
 *.iml
 .pytest_cache/
 logs/*
 logs_optimizer/*
+baselines/

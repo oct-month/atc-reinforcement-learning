@@ -15,6 +15,12 @@ def callback(lcl, _glb):
 def main():
     env = gym.make('AtcEnv-v0')
     env.reset()
+
+    # print(env.observation_space.n)
+    # print(env.action_space)
+    # print(dir(env.action_space))
+    # env.action_space.n = env.observation_space.shape[0]
+
     act = deepq.learn(
         env,
         network='mlp',

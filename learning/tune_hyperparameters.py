@@ -118,8 +118,12 @@ def tune(params: TuningParameters):
     data_frame.to_csv(log_path)
 
 
-if __name__ == '__main__':
+def main():
     # freeze_support()
     parameters = TuningParameters(n_trials=None, n_timesteps=int(1e5),
                                   sampler="tpe", pruner="halving", timeout=3600*7)
     tune(parameters)
+
+
+if __name__ == '__main__':
+    main()

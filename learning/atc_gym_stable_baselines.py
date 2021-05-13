@@ -141,6 +141,10 @@ class SACModelFactory(ModelFactory):
         return SAC(sacpolicies.MlpPolicy, env, verbose=1, tensorboard_log=log_dir, **self.hyperparams)
 
 
-if __name__ == '__main__':
+def main():
     freeze_support()
     learn(PPO2ModelFactory(), time_steps=int(7e6), multiprocess=True, record_video=False)
+
+
+if __name__ == '__main__':
+    main()
